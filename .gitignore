@@ -13,6 +13,8 @@ dist-ssr
 *.local
 .env
 .env.local
+.husky/*
+!.husky/pre-commit
 
 # Editor directories and files
 .vscode/*
