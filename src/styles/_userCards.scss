@@ -1,0 +1,21 @@
+@use './variables' as v;
+
+.user-cards {
+  padding: v.$spacing-md;
+  text-align: center;
+
+  h2 {
+    margin-bottom: v.$spacing-sm;
+  }
+
+  &__container {
+    max-height: 80vh; // hauteur visible
+    overflow-y: auto; // scroll vertical
+    display: flex;
+    flex-direction: column;
+    gap: v.$spacing-sm;
+    width: min(90vw, 600px); // largeur responsive
+    margin: 0 auto; // centré
+    padding-right: 4px; // éviter chevauchement scrollbar
+  }
+}
