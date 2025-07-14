@@ -1,8 +1,5 @@
 @use './variables' as *;
-
-body {
-  background-color: $color-bg;
-  color: $color-text;
-  font-family: $font-main;
-  font-size: $font-size-base;
-}
+@use './globals';
+@use './header';
+@use './userCards';
+@use './userCard';

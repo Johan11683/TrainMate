@@ -1,0 +1,37 @@
+@use './variables' as v;
+
+.user-card {
+  display: flex;
+  align-items: center; // avatar et texte alignés verticalement
+  gap: v.$spacing-sm; // petit espace
+  padding: v.$spacing-sm;
+  border: 1px solid v.$color-dark;
+  border-radius: v.$radius-md;
+  background: v.$color-light;
+  box-shadow: v.$shadow-soft;
+
+  &__avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0; // ne se réduit jamais
+  }
+
+  &__info {
+    flex: 0 1 400px; // largeur maxi mais peut rétrécir
+    margin-inline: auto; // ✅ se centre dans l’espace restant
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.25;
+
+    h3 {
+      margin: 0 0 0.3rem;
+    }
+    p {
+      margin: 0.15rem 0;
+    }
+  }
+}
