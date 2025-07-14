@@ -1,0 +1,47 @@
+@use 'variables' as v;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: v.$spacing-sm v.$spacing-md;
+  background: v.$color-dark;
+  color: v.$color-light;
+  box-shadow: v.$shadow-soft;
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: v.$spacing-xs;
+  }
+
+  &__logo {
+    width: 48px;
+    height: auto;
+    border-radius: v.$radius-sm;
+  }
+
+  &__title {
+    font-family: v.$font-main;
+    font-size: v.$font-size-heading;
+    font-weight: 600;
+  }
+
+  &__nav {
+    display: flex;
+    gap: v.$spacing-md;
+
+    a {
+      color: v.$color-light;
+      text-decoration: none;
+      font-family: v.$font-main;
+      font-size: 1rem;
+      transition: color 0.2s;
+
+      &:hover,
+      &:focus-visible {
+        color: v.$color-accent;
+      }
+    }
+  }
+}
